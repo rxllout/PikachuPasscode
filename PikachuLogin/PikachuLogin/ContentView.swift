@@ -48,19 +48,19 @@ struct FinalView: View {
     
     var body: some View {
         ZStack{
-            Color.black.edgesIgnoringSafeArea(.all)
+            Color.white.edgesIgnoringSafeArea(.all)
             
             
             Circle()
-                .foregroundColor(Color("bg"))
+                .foregroundColor(.blue)
                 .frame(width: 500, height: 500)
                 .offset(x: 0, y: -300)
             
             
-            Text("P I K A C H U")
+            Text("S Q U I R T L E")
                 .font(.system(size: 52))
                 .fontWeight(.light)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
                 .offset(x: 0, y: -300)
             
             ViewTwo().offset(x: 0, y: -60)
@@ -74,7 +74,7 @@ struct FinalView: View {
                 
            
             if !pin1.isEmpty {
-                Image("image1")
+                Image("Sq5")
                     .resizable()
                     .frame(width: 350, height: 350, alignment: .center)
                    
@@ -84,7 +84,7 @@ struct FinalView: View {
                
             
             if !pin2.isEmpty {
-                Image("image1")
+                Image("Sq5")
                     .resizable()
                     .frame(width: 350, height: 350, alignment: .center)
                     
@@ -93,7 +93,7 @@ struct FinalView: View {
                
             
             if !pin3.isEmpty {
-                Image("image1")
+                Image("Sq5")
                     .resizable()
                     .frame(width: 350, height: 350, alignment: .center)
                     
@@ -103,7 +103,7 @@ struct FinalView: View {
             
             
             if !pin4.isEmpty { // <1>
-                Image("image1")
+                Image("Sq5")
                     .resizable()
                     .frame(width: 350, height: 350, alignment: .center)
                     
@@ -111,6 +111,8 @@ struct FinalView: View {
                 
                
             }
+
+                    
             
             if ((pin1+pin2+pin3+pin4) == "1234")
             {
@@ -118,45 +120,55 @@ struct FinalView: View {
                     
 
                 }
+                
+//                if ((pin1+pin2+pin3+pin4) != "1234") {
+//
+//                    Image("image4")
+//                        .resizable()
+//                        .frame(width: 350, height: 350, alignment: .center)
+//
+//                       }
             } .offset(x: 0, y: -60)
+            
+            
                 
             
             
             Text("E N T E R   P I N")
                 .font(.title)
                 .fontWeight(.regular)
-                .foregroundColor(Color.white)
+                .foregroundColor(Color.black)
                 .offset(x: -80, y: 170)
         
         HStack{
 
             TextField("0", text: $pin1)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .offset(x: 10, y: 0)
                 .frame(width: 30, height: 50)
                 .padding()
-                       .border(Color.white, width: 3)
+                       .border(Color.blue, width: 3)
             
             TextField("0", text: $pin2)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .offset(x: 10, y: 0)
                 .frame(width: 30, height: 50)
                 .padding()
-                       .border(Color.white, width: 3)
+                       .border(Color.blue, width: 3)
            
             TextField("0", text: $pin3)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .offset(x: 10, y: 0)
                 .frame(width: 30, height: 50)
                 .padding()
-                .border(Color.white, width: 3)
+                .border(Color.blue, width: 3)
             
             TextField("0", text: $pin4)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .offset(x: 10, y: 0)
                 .frame(width: 30, height: 50)
                 .padding()
-                       .border(Color.white, width: 3)
+                       .border(Color.blue, width: 3)
             
             ZStack{
                 Rectangle()
@@ -168,16 +180,17 @@ struct FinalView: View {
                     Image(systemName: "checkmark")
                         .resizable()
                         .frame(width: 40, height: 30)
-                        .foregroundColor(.white)
+                        .foregroundColor(.blue)
                        
                 }
                 
                 if ((pin1+pin2+pin3+pin4) != "1234")
                 {
+                    Image("")
                     Image(systemName: "xmark")
                         .resizable()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(.white)
+                        .foregroundColor(.cyan)
                        
                 }
             }
